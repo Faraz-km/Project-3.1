@@ -9,7 +9,9 @@ SELECT m.match_id,                        -- the key
        m.match_winner,                    -- unchanged
        m.player_of_match,
        m.toss_winner,                     -- unchanged
-       m.toss_decision                    -- unchanged
+       m.toss_decision,                    -- unchanged
+       m.team1,
+       m.team2
 FROM v_matches_venue m                    -- 1212 rows
 JOIN v_city_clean c ON c.match_id = m.match_id
 JOIN v_season s ON s.match_id = m.match_id;
